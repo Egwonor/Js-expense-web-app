@@ -226,21 +226,13 @@ var UIController = (function() {
             
         },
         
-        
-        clearFields: function() {
-            var fields, fieldsArr;
+           clearFields: function() {
             
-            fields = document.querySelectorAll(DOMstrings.inputDescription + ', ' + DOMstrings.inputValue);
-            
-            fieldsArr = Array.prototype.slice.call(fields);
-            
-            fieldsArr.forEach(function(current, index, array) {
-                current.value = "";
-            });
-            
-            fieldsArr[0].focus();
+            document.querySelector(DOMstrings.inputDescription).value = "";
+            document.querySelector(DOMstrings.inputValue).value = "";
+            document.querySelector(DOMstrings.inputDescription).focus();
         },
-        
+       
         
         displayBudget: function(obj) {
             var type;
